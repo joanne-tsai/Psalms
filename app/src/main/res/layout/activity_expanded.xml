@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpandedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="80">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="8"
+            android:weightSum="15"
+            android:onClick="collapse"
+            android:id="@+id/top">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="8"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:text="Psalm X"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="2"/>
+
+            <ImageButton
+                android:id="@+id/favoriteStar"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="3"
+                android:padding="15dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:onClick="favorite"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/empty_star" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/darker_gray"
+            android:layout_weight=".5"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_weight="63" />
+
+<!--        <com.google.android.material.chip.ChipGroup-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_weight="5"-->
+<!--            android:layout_margin="5dp">-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:backgroundTint="#C4C4C4"-->
+<!--                android:text="Morning"-->
+<!--                app:chipIcon="@drawable/close" />-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:backgroundTint="#C4C4C4"-->
+<!--                android:text="Add Tag"-->
+<!--                app:chipIcon="@drawable/add" />-->
+
+<!--        </com.google.android.material.chip.ChipGroup>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/darker_gray"
+            android:layout_weight=".5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="8"
+            android:weightSum="14">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="6"/>
+
+            <ImageButton
+                android:id="@+id/play_pause_btn"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:onClick="playStatus"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/play" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="3"/>
+
+            <ImageButton
+                android:id="@+id/repeat_btn"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:onClick="repeatStatus"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/repeat" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
