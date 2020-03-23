@@ -37,10 +37,10 @@ public class ScrollingActivity extends AppCompatActivity {
     private int[] psalm_numbers = new int[] {
             16, 19,
             24, 25, 27, 29,
-            30, 33,
+            30, 32, 33, 34,
             40, 42, 43,
             50, 51,
-            69,
+            62, 69,
             80, 88, 89,
             95, 98,
             100,
