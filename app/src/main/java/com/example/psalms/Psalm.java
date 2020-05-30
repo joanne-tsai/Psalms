@@ -36,7 +36,7 @@ public class Psalm extends AppCompatActivity {
     private void setTitle(Context context, int num){
         title = readFile(context, "title_" + num + ".txt");
         if (title == null) {
-            title = "P-" + String.format ("%03d", num);;
+            title = "P-" + String.format ("%03d", num);
         }
     }
 
