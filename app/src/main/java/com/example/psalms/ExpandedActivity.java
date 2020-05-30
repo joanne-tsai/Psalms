@@ -101,7 +101,9 @@ public class ExpandedActivity extends AppCompatActivity {
         if (f.current_psalm.getLyrics() != null) {
             adapter.addFragment(new LyricsFragment(), "Lyrics");
         }
-        adapter.addFragment(new PsalmFragment(), "Psalm");
+        if (f.current_psalm.getChinese() != null && f.current_psalm.getEnglish() != null){
+            adapter.addFragment(new PsalmFragment(), "Psalm");
+        }
         viewPager.setAdapter(adapter);
     }
 }

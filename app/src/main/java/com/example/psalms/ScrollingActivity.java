@@ -35,7 +35,6 @@ public class ScrollingActivity extends AppCompatActivity {
 
     private CommonFunctions f;
     private int[] psalm_numbers = new int[] {
-            0,
             16, 19,
             24, 25, 27, 29,
             30, 32, 33, 34,
@@ -48,7 +47,8 @@ public class ScrollingActivity extends AppCompatActivity {
             116, 118,
             122, 123, 126,
             131,
-            142, 143
+            142, 143,
+            0,
     };
     public static Psalm[] psalms;
     public static ArrayList<Integer> favorites = new ArrayList<>();

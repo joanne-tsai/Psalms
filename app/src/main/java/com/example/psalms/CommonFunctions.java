@@ -108,7 +108,7 @@ public class CommonFunctions {
     //Given psalm number, returns index in psalms
     //Raises exception if number doesn't exist
     int getPsalmIdx(int psalm) throws IOException {
-        for (int i = 0; i < psalm && i < psalms.length; i++){
+        for (int i = 0; i < psalms.length; i++){
             if (psalms[i].getNumber() == psalm){
                 return i;
             }
